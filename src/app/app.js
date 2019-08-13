@@ -1,4 +1,8 @@
-import * as angular from 'angular';
+// Moved to webpack.config.js : vendor chunk
+// import * as angular from 'angular';
+// require('@uirouter/angularjs')
+// require('angular-cookies')
+// require('ng-file-upload')
 
 (function () {
 	'use strict';
@@ -10,7 +14,7 @@ import * as angular from 'angular';
 
     // includes All required sources
     require('./app.requires');
-
+    
     app.config(['$stateProvider', '$logProvider', '$locationProvider', '$urlRouterProvider',
         function( $stateProvider, $logProvider, $locationProvider, $urlRouterProvider) {
 
@@ -45,4 +49,5 @@ import * as angular from 'angular';
 
     // app.run(['$state', function($state) {
     // }]);
+    
 })();

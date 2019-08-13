@@ -20,13 +20,13 @@
             };
     }]);
 
+/*
     // http://blog.jeonghwan.net/server-side-loggin-in-angular/
     app.factory('$exceptionHandler', ['$injector', function ($injector) {
         return function (exception, cause) {
             var log = $injector.get('$log');
         };
 	}]);
-
 	// Migrate to: UI-Router 1.0 Trace service
 	app.run(['$rootScope', '$transitions', '$trace', function($rootScope, $transitions, $trace) {
 		// $trace.enable('TRANSITION');
@@ -38,5 +38,5 @@
 			$rootScope.myState = trans.router.stateService.current.name;
 		});
 	}]);
-
+*/
 })();

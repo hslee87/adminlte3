@@ -8,15 +8,14 @@ var isProd = ENV === 'build' || ENV === 'prod';
 
 var config = {
  entry: {
-    'bundles/crmapp': [
-        './src/app/app.js',
-        './src/app/env/app.env.js' 
-    ],
     'bundles/vendor': [
         'angular',
         'angular-cookies',
-        'ng-file-upload',
-        '@uirouter/angularjs'
+        '@uirouter/angularjs',
+        'ng-file-upload'
+    ]
+    ,'bundles/app': [
+        './src/app/app.js'
     ]
 },
  output: {
@@ -64,7 +63,7 @@ var config = {
         filename: 'index.html',
         template: './src/public/index.html',
         inject: 'body',
-        chunks: ['bundles/vendor', 'bundles/crmapp'],
+        chunks: ['bundles/vendor', 'bundles/app']
     })
  ]
 }

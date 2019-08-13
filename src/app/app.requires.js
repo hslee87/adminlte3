@@ -1,9 +1,11 @@
-// Module
+// Module (moved to webpack.config.js)
+// ==============================================
 // require('angular-cookie');
 // require('@uirouter/angularjs');
 // require('ng-file-upload');
 // require('angular-ui-bootstrap');
-// require('jquery');
+
+// require('jquery');       // hard-coded in index.html
 
 // Custom
 

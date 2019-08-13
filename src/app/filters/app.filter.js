@@ -1,4 +1,5 @@
-'use strict';
+(function () {
+    'use strict';
 
 var app = angular.module('adminApp');
 
@@ -63,3 +64,4 @@ app.filter('codeToName', ['CommonService', function(CommonService) {
         return code_name;
     };
 }]);
+})();
