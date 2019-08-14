@@ -26,13 +26,14 @@
 // import angular from 'angular'
 
 class EmptyCtrl {
-	constructor($rootScope, $scope, $http) {
+	constructor($rootScope, $scope, $http, PoloniexService) {
 		console.log("-- Constructor")
 		// member variables
 		this.vm = this;
 		this.$rootScope = $rootScope;
 		this.$scope = $scope;
 		this.$http = $http;
+		this.poloniexService = PoloniexService;
 	}
 
 	$onInit() {
@@ -43,16 +44,19 @@ class EmptyCtrl {
 		let t = await this.esTest()
 		// use $scope.$apply() if needed
 		console.log('--- initCtrl() t = ', t)
+
+		let ticker = await this.poloniexService.returnTicker();
+		console.log('--- Ticker = ', ticker)
 	}
 
 	async esTest() {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
-				resolve('esTest')
+				resolve('Timeout Async Test')
 			}, 1000)
 		})
 	}
 }
 
-EmptyCtrl.$inject = ['$rootScope', '$scope', '$http'];
-angular.module('adminApp').controller('EmptyCtrl', EmptyCtrl);
+angular.module('adminApp').controller('EmptyCtrl',
+	['$rootScope', '$scope', '$http', 'PoloniexService', EmptyCtrl]);
