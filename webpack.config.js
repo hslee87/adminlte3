@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const path = require('path');
 var ENV = process.env.npm_lifecycle_event;
@@ -83,8 +83,21 @@ if (isProd) {
         new CopyWebpackPlugin([{
             from: __dirname + '/src/public',
             logLevel: 'warn'
-        }]), new UglifyJsPlugin()
-    )
-
+        }])
+    );
+    
+    // https://github.com/webpack-contrib/terser-webpack-plugin
+    config.optimization = {
+        minimizer: [new TerserPlugin({
+            exclude: /\/node_modules/,
+            test: /\.js(\?.*)?$/i,
+            sourceMap: true,
+            terserOptions: {
+                output: {
+                  comments: false,
+                },
+              },
+          })]
+    };
 }
 module.exports = config;
