@@ -15,7 +15,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "gulp": "^3.9.1",
     "gulp-ng-config": "^1.4.0",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "jquery": "^1.12.3",
     "nestable": "^0.2.0",
     "ng-file-upload": "^12.2.13",
@@ -24,7 +24,7 @@
     "rimraf": "^2.6.1",
     "toastr": "^2.1.2",
     "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.7.2"
   },
   "devDependencies": {
@@ -35,11 +35,11 @@
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^0.28.0",
     "expose-loader": "^0.7.3",
-    "file-loader": "^0.9.0",
+    "file-loader": "^6.2.0",
     "imports-loader": "^0.7.1",
-    "istanbul-instrumenter-loader": "^1.0.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
     "karma": "^1.6.0",
-    "postcss-loader": "1.2.2",
+    "postcss-loader": "1.3.3",
     "style-loader": "^0.16.1"
   },
   "scripts": {
